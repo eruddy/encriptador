@@ -116,7 +116,7 @@ botonEncriptar.addEventListener("click", function() {
   const mensaje = mensajeInput.value;
   const mensajeConvertido = encriptar3(mensaje);
 
-  resultadoP.textContent = mensajeConvertido;
+  resultadoP.value = mensajeConvertido;
  // Agregar la clase "resultado" al elemento "mensaje"
  const mensajeDiv = document.getElementById("resultado");
  mensajeDiv.classList.add("resultado");
@@ -147,8 +147,11 @@ botonDesencriptar.addEventListener("click", function() {
 
   const mensaje = mensajeInput.value;
   const mensajeConvertido = desencriptar(mensaje);
+  // Agregar la clase "resultado" al elemento "mensaje"
+ const mensajeDiv = document.getElementById("resultado");
+ mensajeDiv.classList.add("resultado");
 
-  resultadoP.textContent = mensajeConvertido;
+  resultadoP.value = mensajeConvertido;
 
 });
 function copiarTexto(elemento) {
